@@ -1,0 +1,379 @@
+.heading {
+  margin-bottom: 20px;
+}
+.heading h2 {
+  font-size: 4em;
+  color: #a38e63;
+  font-family: "Playfair Display", serif;
+}
+
+.navDesktop {
+  text-align: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 999;
+}
+.navDesktop .link {
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  padding: 0px;
+  margin: 0px 20px;
+  font-family: "din";
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  color: #a38e63;
+  line-height: 70px;
+  cursor: pointer;
+  font-family: "Playfair Display", serif;
+}
+.navDesktop .link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 20px;
+  left: 0;
+  background-color: #a38e63;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.navDesktop .link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.header {
+  background-image: url(/img/sara-1.jpg);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+.header h1 {
+  font-size: 8em;
+  font-family: "Playfair Display", serif;
+  color: #a38e63;
+  margin: 0;
+  padding: 0;
+  line-height: 0.8em;
+}
+.header h2 {
+  font-size: 4em;
+  font-family: "Playfair Display", serif;
+  margin: 0;
+  padding: 0;
+}
+.header .content {
+  margin-bottom: 2em;
+}
+.header .icon svg {
+  cursor: pointer;
+  fill: white;
+}
+.header .icon {
+  margin-bottom: 2em;
+}
+
+.bio {
+  color: white;
+  min-height: 100vh;
+}
+.bio .title {
+  color: #a38e63;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.bio .bioBox {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 4em;
+}
+
+.music {
+  color: white;
+  min-height: 100vh;
+}
+.music .musicBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.music .musicBox .left {
+  width: 10%;
+}
+.music .musicBox .right {
+  width: 90%;
+}
+.music .icon {
+  background-color: transparent;
+  border: 2px solid #a38e63;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition-duration: 0.2s;
+}
+.music .icon:hover {
+  background-color: #a38e63;
+  transition-duration: 0.2s;
+}
+.music .icon svg {
+  fill: white;
+}
+
+.videos {
+  color: white;
+}
+.videos .videosBox {
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.videos .video {
+  width: 100%;
+}
+
+.gallery .galleryImg {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+.videos .videosGrid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  column-gap: 20px;
+}
+
+.contacto {
+  color: white;
+  padding-top: 32em;
+  text-align: center;
+}
+.contacto .content {
+  background-color: white;
+  padding: 40px 0;
+  color: black;
+}
+.contacto .contactoBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contacto .contactoBox .left {
+  width: 50%;
+}
+.contacto .contactoBox .right {
+  width: 50%;
+}
+.contacto .icons {
+  display: flex;
+  column-gap: 10px;
+  justify-content: flex-end;
+}
+.contacto .icon {
+  background-color: transparent;
+  border: 2px solid #a38e63;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition-duration: 0.2s;
+}
+.contacto .icon svg {
+  fill: #a38e63;
+}
+.contacto .right {
+  color: #a38e63;
+  text-align: left;
+  padding: 0 40px;
+}
+.contacto .right a {
+  text-decoration: none;
+  color: black;
+}
+.contacto .copyright {
+  margin: 20px 0;
+  font-size: 0.8em;
+  color: #a38e63;
+}
+.music .iconsMobile {
+  display: none;
+}
+.navMobile {
+  display: none;
+}
+.songBox {
+  display: none;
+}
+.songBox1 {
+  display: block;
+}
+
+@media only screen and (max-width: 1000px) {
+  .navDesktop {
+    display: none;
+  }
+  .navMobile {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 998;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.2s;
+  }
+  .navMobile .left {
+    width: 40%;
+  }
+  .navMobile .left h1 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Playfair Display", serif;
+  }
+  .navMobile .center {
+    width: 20%;
+    text-align: center;
+  }
+  .navMobile .right {
+    width: 40%;
+    text-align: right;
+  }
+  .navMobile .left .logo {
+    width: 120px;
+  }
+  .navMobile .left .logoImg {
+    width: 100%;
+    height: auto;
+  }
+  .navMobile .burger svg {
+    fill: white;
+  }
+  .navMobile .social {
+    display: inline-block;
+    padding: 0 4px;
+  }
+  .navMobile .social svg {
+    fill: white;
+    transition-duration: 0.2s;
+  }
+  .navMobile .social:hover svg {
+    fill: #a38e63;
+    transition-duration: 0.2s;
+  }
+  .navMobileScrolled h1 {
+    color: #a38e63 !important;
+  }
+  .navMobileScrolled svg {
+    fill: #a38e63 !important;
+  }
+  .menuMobile h1 {
+    color: #a38e63 !important;
+    font-family: "Playfair Display", serif;
+    font-size: 2em;
+    text-align: center;
+  }
+  .menuMobile h2 {
+    color: #a38e63 !important;
+    font-family: "Playfair Display", serif;
+    font-size: 1em;
+  }
+  .menuMobile .link {
+    font-size: 2em;
+  }
+
+  .menuMobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    color: #a38e63;
+    justify-content: center;
+    align-items: center;
+  }
+  .navMobileScrolled {
+    background-color: white;
+    transition-duration: 0.2s;
+  }
+  .header h1 {
+    font-size: 4em;
+  }
+  .header h2 {
+    font-size: 2em;
+  }
+  .bio {
+    padding: 20px;
+  }
+  .bio .bioBox {
+    width: 60%;
+  }
+  .music .musicBox .left {
+    display: none;
+  }
+  .music .iconsMobile {
+    display: flex;
+    justify-content: center; /*para alinear un elemento */
+    column-gap: 10px; /*para separar los elementos*/
+  }
+  .contacto .contactoBox {
+    display: block;
+  }
+  .contacto .contactoBox .left {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .contacto .contactoBox .right {
+    width: 100%;
+    text-align: center;
+  }
+  .videos .videosGrid {
+    display: block;
+    padding: 20px;
+  }
+  .videos iframe {
+    height: 200px;
+    margin-bottom: 20px;
+  }
+}
